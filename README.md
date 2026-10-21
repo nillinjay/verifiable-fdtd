@@ -18,9 +18,8 @@ script that is thrown away afterwards.
 
 This project started from a grating-coupler problem — the kind of structure where a mode has
 to be launched into a sub-micron periodic region, the mesh has to grade, and the answer has to
-survive a reviewer asking "how do you know". The author is an optical engineer (PhD, grating
-couplers by trade) who got tired of re-deriving the same confidence from scratch for every
-design.
+survive a reviewer asking "how do you know". The author is Zijie Yuan, a PhD in optical engineering (grating couplers by trade), who
+got tired of re-deriving the same confidence from scratch for every design.
 
 So the platform inverts the usual order. **Nothing is claimed without a criterion that can
 fail.** Every capability ships with:
@@ -51,13 +50,13 @@ status yourself.
 ## Quick start
 
 ```bash
-git clone https://github.com/<you>/torchfdtd-platform
-cd torchfdtd-platform
+git clone https://github.com/nillinjay/verifiable-fdtd
+cd verifiable-fdtd
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 
 # The solver (TorchFDTD, MIT) is a dependency, not a vendored copy:
-git clone https://github.com/<torchfdtd>/torchfdtd /opt/torchfdtd
+git clone https://github.com/hyoseokp/TorchFDTD /opt/torchfdtd
 tools/bootstrap_solver.sh /opt/torchfdtd      # links it, then imports it to prove it works
 ```
 
@@ -181,5 +180,5 @@ required to build or run this software.
 
 ---
 
-**Author.** Optical engineer, PhD — grating couplers. Built this because the confidence
-question kept costing more than the simulation.
+**Author.** Zijie Yuan — PhD, Optical Engineering, Zhejiang University; grating couplers
+by trade. Built this because the confidence question kept costing more than the simulation.
